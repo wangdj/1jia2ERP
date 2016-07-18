@@ -16,7 +16,7 @@ public class BaseController {
 
         request.setAttribute("ex", ex);
 
-        // 根据不同错误进行不同的处理
+        // 根据不同错误进行不同的处理11
         if(ex instanceof BusinessException) {
             //业务错误时返回
             return "error-business";
