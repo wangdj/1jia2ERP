@@ -13,6 +13,7 @@ public class BaseController {
     @ExceptionHandler
     public String exp(HttpServletRequest request, Exception ex) {
 
+
         request.setAttribute("ex", ex);
 
         // 根据不同错误进行不同的处理

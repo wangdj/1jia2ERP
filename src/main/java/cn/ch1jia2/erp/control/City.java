@@ -37,7 +37,9 @@ public class City extends BaseController {
         return this.service.getHotCities();
     }
 
-    //根据省或市，取得其下所有郊区名字
+    /**
+     *根据省或市，取得其下所有郊区名字
+     */
     @RequestMapping(value = "/{id}/suburbs", method = RequestMethod.GET)
     public List<SuburbEntity> getSuburbsByCityName(@PathVariable("id") int cityid){
         return this.service.getSuburbsByCityID(cityid);

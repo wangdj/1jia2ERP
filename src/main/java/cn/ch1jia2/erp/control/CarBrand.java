@@ -86,6 +86,9 @@ public class CarBrand extends BaseController{
         ObjectMapper mapper = new ObjectMapper();
         CarBrandEntity entity = null;
         try {
+
+
+
             entity = mapper.readValue(body,  CarBrandEntity.class);
             this.service.update(entity);
         } catch (JsonParseException e) {
@@ -98,6 +101,11 @@ public class CarBrand extends BaseController{
         return entity;
     }
 
+    /**
+     *
+     * @param body
+     * @return
+     */
     @RequestMapping(method = RequestMethod.PATCH)
     public List<CarBrandEntity> search(@RequestBody String body) {
         ObjectMapper mapper = new ObjectMapper();
